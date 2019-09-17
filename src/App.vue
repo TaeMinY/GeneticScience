@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <div id="screen">
-      <v-text-field required v-model="viewtext" autocomplete="off"></v-text-field>
+
+      <v-text-field  required v-model="viewtext" autocomplete="off" type="text" placeholder="띄여쓰기,소문자 금지"></v-text-field>
       <div>{{view}}</div>
       <div>
         전사:
@@ -9,6 +10,7 @@
           {{a}}
         </span>
       </div>
+    
       <div>
         번역:
         <span v-for="a in end" :key="a">
@@ -20,7 +22,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'App',
   components: {
@@ -161,7 +162,6 @@ export default {
       {
         name:"알라닌",
         opt : "GCG" 
-
       },
       {
         name:"타이로신",
@@ -317,7 +317,6 @@ export default {
           }
           this.view = ""
         }
-
       }
       if(this.view != "이상합니다...."){
         for(let j = 0; j < this.arr.length ; j = j+3){
@@ -325,16 +324,13 @@ export default {
           for(let k = 0 ; k < 3 ;k++){
             gg+=this.arr[k+j]
           }
-
           if(this.arr.length > 2){
-
             for(let k = 0 ; k < this.tra.length; k++){
               if(gg == this.tra[k].opt){
                 this.end.push(this.tra[k].name)
               }
            }
           }
-
           if(this.end[0] != "메싸이오닌"){
         this.end = [];
         this.view = "개시코돈을 작성하지 않았습니다."
@@ -343,17 +339,13 @@ export default {
         
       }else{
       }
-
       
-
       
-
       
   }
 },
   methods: {
   },
-
 };
 </script>
 <style scoped>
