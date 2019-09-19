@@ -10,7 +10,6 @@
           {{a}}
         </span>
       </div>
-    
       <div>
         번역:
         <span v-for="a in end" :key="a">
